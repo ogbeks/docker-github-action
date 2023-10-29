@@ -11,4 +11,6 @@ jobs:
     steps:
     - name: Build docker images
       uses: actions/checkout@v2
+    
+    - name: Run the local dockerfile
       run: docker build -t demo .
