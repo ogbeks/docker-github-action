@@ -8,11 +8,11 @@ resource "aws_s3_bucket" "my_bucket" {
 }
 
 terraform {
-  backend "s3" {
-    bucket         = "terraform-state"
-    key            = "terraform/state"
-    region         = "us-east-1"
+  required_providers {
+    aws= {
+      source="hashicorp/aws"
+      version="~> 5.0"
+    }
   }
 }
-
 
